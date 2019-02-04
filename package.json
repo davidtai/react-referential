@@ -1,0 +1,42 @@
+{
+  "name": "react-referential",
+  "version": "1.0.0",
+  "description": "Referential Tree state management intergration for react",
+  "main": "index.mjs",
+  "scripts": {
+    "build": "sake build",
+    "test": "sake test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidtai/react-referential.git"
+  },
+  "keywords": [
+    "referential",
+    "react",
+    "state"
+  ],
+  "author": "David Tai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidtai/react-referential/issues"
+  },
+  "homepage": "https://github.com/davidtai/react-referential#readme",
+  "dependencies": {
+    "akasha": "0.1.13",
+    "react": "16.7.0",
+    "referential": "0.5.25"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/plugin-proposal-decorators": "7.3.0",
+    "@babel/plugin-transform-react-jsx": "7.3.0",
+    "rollup-plugin-babel": "4.3.2",
+    "sake-bundle": "0.6.14",
+    "sake-cli": "0.7.2",
+    "sake-outdated": "0.4.4",
+    "sake-publish": "0.1.17",
+    "sake-version": "0.1.19",
+    "uglify": "0.1.5"
+  }
+}
