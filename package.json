@@ -1,6 +1,6 @@
 {
   "name": "react-referential",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Referential Tree state management intergration for react",
   "main": "index.mjs",
   "scripts": {
