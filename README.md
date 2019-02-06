@@ -1,6 +1,6 @@
 # Referential Tree stateful persistant storage for React
 
-# LICENSE
+## License
 Copyright (c) 2019, David Tai
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
