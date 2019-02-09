@@ -7,23 +7,47 @@ use 'sake-version'
 
 task 'clean', 'clean project', ->
   exec '''
-  rm -rf lib
+  rm index.js
+  rm index.js.map
   rm index.mjs
   rm index.mjs.map
   '''
 
 task 'build', 'build project', ->
   b = new Bundle
-    entry: 'src/index.js'
-    plugins:  [babel(
-      plugins: [
-        '@babel/plugin-transform-react-jsx'
-        ['@babel/plugin-proposal-decorators', decoratorsBeforeExport: false ]
-      ]
-    )]
+      entry: 'src/index.js'
+      plugins:  [babel(
+        exclude: 'node_modules/**'
+        presets: [
+          [
+            '@babel/preset-env',
+            {
+              targets:  {
+                'browsers': ['> 0.25%', 'not dead'],
+              },
+            },
+          ],
+        ],
+        plugins: [
+          'transform-react-pug',
+          '@babel/plugin-transform-react-jsx',
+          [
+            '@babel/plugin-proposal-decorators',
+            legacy: true,
+          ],
+          [
+            '@babel/plugin-proposal-class-properties',
+            loose: true,
+          ],
+        ]
+      )]
 
-  Promise.all [
-    b.write
-      format: 'es'
-  ]
+    Promise.all [
+      b.write
+        format: 'es'
+      b.write
+        format: 'cjs'
+      # b.write
+      #   format: 'web'
+    ]
 
