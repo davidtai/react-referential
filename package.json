@@ -25,7 +25,7 @@
   "homepage": "https://github.com/davidtai/react-referential#readme",
   "dependencies": {
     "akasha": "0.1.13",
-    "react": "16.8.6",
+    "react": "16.9.0",
     "referential": "0.5.25"
   },
   "devDependencies": {
